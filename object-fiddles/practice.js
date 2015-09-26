@@ -284,5 +284,3 @@ function binCard(person, creditCard) {
 }
   
 binCard(me, myCard)
-
-
