@@ -1,0 +1,79 @@
+html body {
+  background-color: #216ed8;
+  margin:0px;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  background-color: #0050bf;
+  height: 30px;
+  width: 100%;
+  display:inline-block;
+  text-align: center;
+  
+}
+div.headertext {
+  font-size: 12px;
+  font-family: arial;
+  color: #d5f5ff;
+  display:inline-block;
+  padding-top: 8px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+div.largeWhiteBox {
+  background-color: white;
+  height: 90%;
+  width: 90%;
+  margin:5%;
+  box-shadow: 3px 3px 3px 3px #0a4392;
+}
+
+div.topBar {
+  display:inline-block;
+  width: 100%;
+}
+
+img.topSLClogo {
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 30%;
+  display:inline-block;
+}
+
+div.textcontainer {
+  width: 60%;
+  display:inline-block;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+div.toplinks {
+  display:inline-block;
+  font-size: 18px;
+  font-family: arial;
+  color: #6cc7f4;
+  margin: 10px;
+}
+
+img.familypic {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+}
+
+div.secondrowcontainer {
+  display:inline-block;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+img.secondrowimages {
+  width: 30%;
+  margin: 1.4%
+}
