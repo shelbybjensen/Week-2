@@ -144,8 +144,6 @@ for(var key in me) {
   }
 
 
-
-
 //NEXT PROBLEM
 
 
@@ -162,11 +160,17 @@ var user = {
 /*Above you're given a user object. Loop through the user object checking to make sure
 that each value is truthy. If it's not truthy, remove it from the object. */
 
-  //Code Here
+ for(var key in user){
+    if(!user[key]){
+      delete(user[key])
+    }
+  }
+  console.log(user)
 
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
-  //Code Here
+  user.name = 'Shelby Jensen'
+  user.username = 'shelbybjensen'
 
 
 
@@ -190,11 +194,12 @@ var user = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  //Code Here
+  user.name = 'Tyle S. McGinnis'
+  user.email = 'tyler.mcginnis@devmounta.in'
 
 //Now call the sayName method that's on the user object which will alert the users email
 
-  //Code Here
+  user.sayName()
 
 
 
@@ -206,17 +211,24 @@ var user = {
 
 //Create an empty object called methodCollection.
 
-  //Code Here
+  var methodCollection ={};
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
-  //Code Here
+  methodCollection.alertHello = function (){
+    alert('Hello');
+  }
+
+  methodCollection.logHello = function (){
+    console.log('hello');
+  }
 
 //Now call your alertHello and logHello methods.
 
-  //Code Here
+  methodCollection.logHello()
+  methodCollection.alertHello()
 
 
 
@@ -226,8 +238,15 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
-  //Code Here
-
+  function MakePerson(name, birthday, ssn) {
+    return {
+      name:name, 
+      birthday:birthday, 
+      ssn:ssn
+    }
+  }
+  
+  var me = new MakePerson('Shelby', 'July 19 1991', 101010)
 
 
 //NEXT PROBLEM
@@ -236,8 +255,16 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
-  //Code Here
-  
+function MakeCard(cardNumber, expirationDate, billingAddress, cvc) {
+    return {
+        cardNumber: cardNumber, 
+        expirationDate: billingAddress, 
+        billingAddress: billingAddress, 
+        cvc: cvc
+    }
+}
+
+  var myCard = new MakeCard('45748574857', '07/18', '123 S 123 E', '700')
   
   
 //NEXT PROBLEM
@@ -249,6 +276,13 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
    Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard.
 */
 
-  //Code Here
+function binCard(person, creditCard) {
+    return {
+        person: person, 
+        creditCard: creditCard
+    }
+}
+  
+binCard(me, myCard)
 
 
